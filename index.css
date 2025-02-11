@@ -1,0 +1,174 @@
+/* Resetando margens e preenchimento */
+
+body{
+    background-image: url("/img/foto\ 5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 50px; /* Adicionando espaço no topo para não sobrepor a navegação */
+}
+
+/* Estilos para a navegação */
+.top {
+    background-color: rgb(230, 226, 0);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Logo e título */
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinha a logo e o nome na mesma linha */
+    gap: 10px; /* Espaço entre a logo e o nome */
+}
+
+.top img {
+    height: 40px; /* Tamanho menor da logo */
+    width: auto;
+    border-radius: 5px; /* Borda levemente arredondada para suavizar */
+}
+
+.top h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222;
+    font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
+}
+
+/* Estilos para o menu */
+.top ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.top ul li {
+    display: inline;
+}
+
+.top ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.top ul li a:hover {
+    color: #000;
+}
+
+/* Estilos para os botões */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgb(230, 226, 0);
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para as seções (cards) */
+section {
+    width: 90%;
+    max-width: 800px; /* Limita a largura das seções */
+    margin: 30px auto; /* Centraliza a seção horizontalmente */
+    padding: 20px;
+    background-color: #f4f4f4; /* cinza claro */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o efeito de card */
+    text-align: center; /* Centraliza o conteúdo dentro das seções */
+}
+
+/* Estilos de título dentro das seções */
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Estilos para os parágrafos dentro das seções */
+section p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Galeria de imagens */
+.galery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.galery img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 500px) {
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top h1 {
+        margin-bottom: 10px;
+    }
+
+    /* Ajuste no tamanho das seções para telas pequenas */
+    section {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Garantindo que o menu fique visível no desktop */
+@media (min-width: 769px) {
+    .top ul {
+        display: flex; /* Certifica-se de que a navegação esteja visível */
+    }
+
+    #menu-btn {
+        display: none; /* Não exibe o botão de menu em telas grandes */
+    }
+}
+
+
+
