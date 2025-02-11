@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.getElementById("menu-btn").addEventListener("click", function() {
-    document.getElementById("nav-links").classList.toggle("active");
-});
+function toggleMenu() {
+    const menu = document.querySelector(".menu");
+    menu.classList.toggle("active");
+}
