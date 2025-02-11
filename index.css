@@ -58,24 +58,26 @@ body {
 }
 
 /* Estilos para o menu */
-.top ul {
+.menu {
     list-style: none;
     display: flex;
     gap: 15px;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
 }
 
-.top ul li {
+.menu li {
     display: inline;
 }
 
-.top ul li a {
+.menu li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.top ul li a:hover {
+.menu li a:hover {
     color: #ffffff;
 }
 
@@ -154,13 +156,6 @@ section p {
     z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
 }
 
-/* Esconder o menu por padrão no mobile */
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
 /* Tornar a navbar responsiva */
 @media (max-width: 768px) {
     .menu {
@@ -187,7 +182,5 @@ section p {
         display: block;
     }
 }
-
-
 
 
