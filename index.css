@@ -151,6 +151,7 @@ section p {
     cursor: pointer;
     display: none; /* Escondido em telas grandes */
     color: white;
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
 }
 
 /* Esconder o menu por padrão no mobile */
@@ -167,12 +168,13 @@ section p {
         flex-direction: column;
         background-color: rgb(39, 3, 122);
         position: absolute;
-        top: 60px;
+        top: 60px; /* Ajuste conforme a altura da navbar */
         right: 0;
         width: 200px;
         padding: 15px;
         border-radius: 0 0 10px 10px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 999; /* Garante que o menu fique acima de outros elementos */
     }
 
     /* Mostrar o menu ao ativar a classe 'active' */
@@ -180,7 +182,7 @@ section p {
         display: flex;
     }
 
-    /* Mostrar o botão do menu hamburguer no mobile */
+    /* Mostrar o botão do menu hambúrguer no mobile */
     .menu-toggle {
         display: block;
     }
