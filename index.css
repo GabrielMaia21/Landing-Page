@@ -35,6 +35,7 @@ body {
     width: 100%;
     height: 60px; /* Altura fixa para evitar sobreposição */
     z-index: 10;
+    position: relative;
 }
 
 /* Logo e título */
@@ -164,7 +165,7 @@ section p {
         background-color: rgb(39, 3, 122);
         position: absolute;
         top: 60px; /* Ajuste conforme a altura da navbar */
-        right: 0;
+        right: 20px;
         width: 200px;
         padding: 15px;
         border-radius: 0 0 10px 10px;
