@@ -1,22 +1,15 @@
 /* Resetando margens e preenchimento */
-
-body{
-    background-image: url("/img/foto\ 5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-main {
-    padding-top: 80px; /* Deve ser maior que a altura da navbar */
-}
 
-/* Estilos gerais do body */
 body {
+    background-image: url("/img/foto\ 5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -28,36 +21,34 @@ body {
     background-color: gold;
     padding: 15px 30px;
     display: flex;
-    justify-content: space-between; /* Alinha os itens à esquerda e à direita */
+    justify-content: space-between;
     align-items: center;
-    position: fixed; /* Fixa a navbar na tela */
+    position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* Altura fixa para evitar sobreposição */
+    height: 80px;
     z-index: 10;
-    padding-bottom: 25px;
 }
 
 /* Logo e título */
 .logo-container {
     display: flex;
-    align-items: center; /* Alinha a logo e o nome na mesma linha */
-    gap: 10px; /* Espaço entre a logo e o nome */
+    align-items: center;
+    gap: 10px;
 }
 
 .top img {
-    height: 70px; /* Tamanho menor da logo */
+    height: 70px;
     width: auto;
     margin-top: 6px;
-    border-radius: 6px; /* Borda levemente arredondada para suavizar */
-    
+    border-radius: 6px;
 }
 
 .top h1 {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #000000;
-    font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
+    color: #000;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Estilos para o menu */
@@ -65,30 +56,26 @@ body {
     list-style: none;
     display: flex;
     gap: 15px;
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimentos padrão */
-}
-
-.menu li {
-    display: inline;
 }
 
 .menu li a {
     text-decoration: none;
-    color: #000000;
+    color: #000;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .menu li a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
-/* Estilos para os botões */
+/* Botão de agendamento */
 button {
     display: block;
+    width: 90%;
+    max-width: 300px;
     margin: 20px auto;
-    padding: 10px 20px;
+    padding: 10px;
     background-color: rgb(230, 226, 0);
     border: none;
     border-radius: 5px;
@@ -98,60 +85,85 @@ button {
     transition: background-color 0.3s ease;
 }
 
+button a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
 button:hover {
     background-color: #ddd;
 }
 
-#sobre-nos{
-    margin-top: 30px;
-
-}
-
-/* Estilos para as seções (cards) */
+/* Seções */
 section {
     width: 90%;
-    max-width: 800px; /* Limita a largura das seções */
-    margin: 30px auto 30px auto; /* Centraliza a seção horizontalmente */
+    max-width: 800px;
+    margin: 30px auto;
     padding: 20px;
-    background-color: #f4f4f4; /* cinza claro */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o efeito de card */
-    text-align: center; /* Centraliza o conteúdo dentro das seções */
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Estilos de título dentro das seções */
 section h2 {
     margin-bottom: 20px;
     font-size: 2rem;
     color: #333;
 }
 
-/* Estilos para os parágrafos dentro das seções */
 section p {
     margin-bottom: 15px;
     font-size: 1.1rem;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 500px) {
+/* Responsividade */
+@media (max-width: 768px) {
     .top {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 10px;
     }
 
-    .top ul {
+    .menu {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(255, 215, 0, 0.9);
+        position: absolute;
+        top: 80px;
+        right: 0;
+        display: none;
+        padding: 10px;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
     }
 
     .top h1 {
-        margin-bottom: 10px;
+        font-size: 1.5rem;
     }
 
-    /* Ajuste no tamanho das seções para telas pequenas */
     section {
         width: 100%;
         padding: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
     }
 }
 
