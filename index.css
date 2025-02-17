@@ -25,17 +25,17 @@ body {
 
 /* Estilos para a navegação */
 .top {
-    background-color: rgb(39, 3, 122);
-    padding: 15px 20px;
+    background-color: gold;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between; /* Alinha os itens à esquerda e à direita */
     align-items: center;
     position: fixed; /* Fixa a navbar na tela */
     top: 0;
-    left: 0;
     width: 100%;
-    height: 60px; /* Altura fixa para evitar sobreposição */
+    height: 80px; /* Altura fixa para evitar sobreposição */
     z-index: 10;
+    padding-bottom: 25px;
 }
 
 /* Logo e título */
@@ -46,15 +46,17 @@ body {
 }
 
 .top img {
-    height: 40px; /* Tamanho menor da logo */
+    height: 70px; /* Tamanho menor da logo */
     width: auto;
-    border-radius: 5px; /* Borda levemente arredondada para suavizar */
+    margin-top: 6px;
+    border-radius: 6px; /* Borda levemente arredondada para suavizar */
+    
 }
 
 .top h1 {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
 }
 
@@ -73,7 +75,7 @@ body {
 
 .menu li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -100,12 +102,16 @@ button:hover {
     background-color: #ddd;
 }
 
+#sobre-nos{
+    margin-top: 30px;
+
+}
+
 /* Estilos para as seções (cards) */
 section {
-    padding-top: 80px;
     width: 90%;
     max-width: 800px; /* Limita a largura das seções */
-    margin: 30px auto; /* Centraliza a seção horizontalmente */
+    margin: 30px auto 30px auto; /* Centraliza a seção horizontalmente */
     padding: 20px;
     background-color: #f4f4f4; /* cinza claro */
     border-radius: 10px; /* Bordas arredondadas */
